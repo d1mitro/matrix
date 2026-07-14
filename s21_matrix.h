@@ -2,9 +2,9 @@
 #define S21_MATRIX
 
 typedef struct matrix_struct {
-    double** matrix;  
-    int rows;        
-    int columns;     
+  double **matrix;
+  int rows;
+  int columns;
 } s21_matrix;
 // БАЗА
 int s21_create_matrix(int rows, int columns, s21_matrix *result);
