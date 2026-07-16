@@ -1,6 +1,7 @@
 #include <check.h>
 #include <math.h>
 #include <stdlib.h>
+
 #include "s21_matrix.h"
 
 void fill_matrix(s21_matrix *A, double values[]) {

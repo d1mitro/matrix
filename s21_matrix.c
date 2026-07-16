@@ -4,7 +4,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
 int matrix_check(s21_matrix *A, s21_matrix *B) {
   if (A == NULL || B == NULL) return 1;
   if (A->matrix == NULL || B->matrix == NULL) return 1;
@@ -22,7 +21,6 @@ int check_for_mult(s21_matrix *A, s21_matrix *B) {
   if (A->columns != B->rows) return 2;
   return 0;
 }
-
 
 int s21_create_matrix(int rows, int columns, s21_matrix *result) {
   if (rows <= 0 || columns <= 0 || result == NULL) {
@@ -68,7 +66,6 @@ void s21_remove_matrix(s21_matrix *A) {
   A->rows = 0;
   A->columns = 0;
 }
-
 
 int s21_eq_matrix(s21_matrix *A, s21_matrix *B) {
   if (A == NULL || B == NULL) return 0;
@@ -183,7 +180,6 @@ int s21_transpose(s21_matrix *A, s21_matrix *result) {
   }
   return 0;
 }
-
 
 int s21_determinant(s21_matrix *A, double *result) {
   if (A == NULL || A->matrix == NULL) return 1;
@@ -313,7 +309,7 @@ int s21_inverse_matrix(s21_matrix *A, s21_matrix *result) {
   double det;
   int status = s21_determinant(A, &det);
   if (status != 0) return status;
-  if (fabs(det) < 1e-7) return 2;  
+  if (fabs(det) < 1e-7) return 2;
 
   s21_matrix complements;
   status = s21_calc_complements(A, &complements);
